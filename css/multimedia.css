@@ -1,0 +1,42 @@
+.multimedia-body {
+	background-color: #1c707f;
+}
+
+.content-primary {
+	height: 100%;
+}
+
+.head-title, .header-content{
+	text-align: center;
+    font-size: -webkit-xxx-large;
+    font-family: monospace;
+    background-color: burlywood;
+}
+
+.menu-options{
+
+}
+
+.profile-picture, .biodata{
+	background-color: white;
+	margin-top: 2%;
+	height: 100px;
+}
+
+.current-section{
+
+}
+
+.profile-content{
+	height: 100%
+}
+
+.ml8 {margin-left: 8px;}
+.ml10 {margin-left: 10px !important;}
+.ml55{margin-left: 55px;}
+.ml68 {margin-left: 68px;}
+.p0{padding:0px;}
+.bg_blue{background: #136a8a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

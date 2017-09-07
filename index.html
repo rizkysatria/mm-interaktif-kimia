@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="icon" href="resources/logo.png"> -->
+        <title>Multimedia Kimia</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/multimedia.css">
+
+        <!-- <script src="lib/modernizr.js"></script> -->
+    </head>
+
+    <body ng-app="MmInteraktifKimia" class="multimedia-body p0">
+        <header></header>
+        <!-- body content here -->
+        <div id="main-container" class="container-fluid">
+            <div class="row">
+                <div ui-view class=""></div>
+            </div>
+        </div>
+        <toast-alert></toast-alert>
+
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-local-storage.js"></script>
+        <script src="lib/aes-min.js"></script>
+        <script src="lib/mode-ecb-min.js"></script>
+        <script src="lib/angular-animate.js"></script>
+        <script src="lib/angular-ui-router.js"></script>
+        <script src="lib/angular-anim-in-out.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/angular-resource.js"></script>
+        <script src="lib/foundation.js"></script>
+        <script src="lib/foundation.orbit.js"></script>
+        <script src="lib/foundation.offcanvas.js"></script>
+        <script src="lib/foundation.reveal.js"></script>
+        <script src="lib/strophe.js"></script>
+        <script src="lib/slick.js"></script>
+        <script src="lib/moment-angular.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        <script src="lib/ui-bootstrap.js"></script> 
+        <script src="lib/iscroll.js"></script>
+        <script src="lib/angular-iscroll.js"></script>
+        <script src="lib/moment.js"></script>        
+        <script src="lib/slick/angular-slick.js"></script>
+        <script src="lib/ng-flow-standalone.js"></script>
+        <script src="app.js"></script>
+
+        <!-- Import js of core module -->
+
+        <!-- Import js of controller each sub page -->
+        <script src="page/homePage/homePageCtrl.js"></script>
+
+        <!-- Import js of each module -->
+        <script src="components/home/Home-directive.js"></script>
+        <script src="components/home/Home-controller.js"></script>
+        
+    </body>
+</html>

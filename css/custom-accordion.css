@@ -1,0 +1,65 @@
+.panel-default > .panel-heading {
+  background-color: #cbd0ff;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+}
+
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 4px 4px 0 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-title a {
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+.panel-body {
+  background: #fff;
+}
+
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.panel:last-child .panel-heading {
+  border-radius: 0 0 4px 4px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+.panel-default .panel-heading a:before {
+  content: '\003e';
+  font-size: 26px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.panel-open .panel-heading a:before {
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
