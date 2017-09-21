@@ -2,8 +2,8 @@
 	background-color: #1c707f;
 }
 
-.content-primary {
-	height: 100%;
+.menu-options {
+	font-size: 12pt;
 }
 
 .head-title, .header-content{
@@ -13,30 +13,96 @@
     background-color: burlywood;
 }
 
-.menu-options{
+.profile-picture {
+	border: 1px solid black;
+	height: 300px;
 
 }
 
-.profile-picture, .biodata{
+.biodata {
 	background-color: white;
 	margin-top: 2%;
 	height: 100px;
 }
 
-.current-section{
-
-}
-
-.profile-content{
-	height: 100%
+.bg-white {
+	background-color: white;
 }
 
 .ml8 {margin-left: 8px;}
 .ml10 {margin-left: 10px !important;}
 .ml55{margin-left: 55px;}
 .ml68 {margin-left: 68px;}
+.mb10{margin-bottom: 10px;}
 .p0{padding:0px;}
 .bg_blue{background: #136a8a;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.panel-default > .panel-heading {
+  background-color: #cbd0ff;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+}
+
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 4px 4px 0 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-title a {
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+.panel-body {
+  background: #fff;
+}
+
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.panel:last-child .panel-heading {
+  border-radius: 0 0 4px 4px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+.panel-default .panel-heading a:before {
+  content: '\003e';
+  font-size: 26px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.panel-open .panel-heading a:before {
+  transform: rotate(90deg);
+  transition: all 0.5s;
 }

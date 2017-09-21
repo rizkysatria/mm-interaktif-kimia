@@ -7,7 +7,7 @@
         return {
             templateUrl: 'components/home/Home-template.html',
             controller: 'homeViewCtrl',
-            controllerAs: 'homeVM',
+            controllerAs: 'homeViewCtrlVM',
             restrict: 'E',
             link: linkFunc
         };
