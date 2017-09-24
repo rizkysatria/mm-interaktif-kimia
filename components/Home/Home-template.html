@@ -1,6 +1,6 @@
-<div class="col-lg-12 col-sm-12 p0 bg_blue">
+<div class="col-lg-12 col-sm-12 p0">
 <!-- LEFT MENU -->
-        <div class="col-lg-2 content-primary menu-section">
+        <div class="col-lg-2 border-right-black-2">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="profile-picture"></div>
@@ -9,25 +9,22 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="head-title">ASAM BASA</div>
-                    <div id="btnProfile" class="menu-options btn btn-primary btn-lg btn-block">PROFILE</div>
-                    <div id="btnKamusBasa" class="menu-options btn btn-primary btn-lg btn-block">KAMUS ASAM BASA</div>
-                    <div id="btnLabAsamBasa" class="menu-options btn btn-primary btn-lg btn-block"> LABORATORIUM ASAM BASA</div>
-                    <div id="btnKelasPintar" class="menu-options btn btn-primary btn-lg btn-block"> KELAS PINTAR</div>
+                    
+                    <div id="btn{{list.id}}" class="menu-options btn btn-primary btn-lg btn-block" ng-repeat="list in homeViewCtrlVM.dataComplete" ng-click="homeViewCtrlVM.buttonMenuUtamaCLicked(list.id)">{{list.judul}}</div>
                 </div>
             </div>
 	   </div>
 <!-- END LEFT MENU-->
 
 <!-- CENTER MENU -->
-
-        <div class="col-lg-2 content-primary menu-section">
+        <div class="col-lg-2 pr0" ng-show="homeViewCtrlVM.penjelasanMateri != null && homeViewCtrlVM.penjelasanMateri.pembahasan != ''">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="head-title mb10">ASAM BASA</div>
+                    <div class="head-title mb10">{{homeViewCtrlVM.penjelasanMateri.judul}}</div>
                     <uib-accordion> 
-                        <div uib-accordion-group id="accordion" ng-repeat="data in homeViewCtrlVM.penjelasanMateri" class="panel-default" heading="{{data.judul}}">
-                             <span ng-repeat="employee in data.subMateri">
-                                <a class="col-lg-12">{{employee.judul}}</a>
+                        <div uib-accordion-group id="accordion" ng-repeat="pembahasan in homeViewCtrlVM.penjelasanMateri.pembahasan" class="panel-default text-transform-capitalize accordion-bg-color" heading="{{pembahasan.judul}}">
+                             <span ng-repeat="subMateri in pembahasan.subMateri">
+                                <a class="col-lg-12">{{subMateri.judul}}</a>
                              </span>
                         </div> 
                     </uib-accordion>
@@ -37,7 +34,16 @@
 <!-- END CENTER MENU -->
 
 <!-- RIGHT MENU -->
-        <div class="col-lg-8 content-primary p0"> 
+        <div class="col-lg-8 p0" ng-show="homeViewCtrlVM.penjelasanMateri != null && homeViewCtrlVM.penjelasanMateri.pembahasan != ''">
+            <div class="col-lg-12">
+                <div id= "headerContent" class="header-content">PROFILE</div>
+                <div class="col-lg-12 bg-white">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-10 p0" ng-show="homeViewCtrlVM.penjelasanMateri == null || homeViewCtrlVM.penjelasanMateri.pembahasan == ''">
             <div class="col-lg-12">
                 <div id= "headerContent" class="header-content">PROFILE</div>
                 <div class="col-lg-12 bg-white">

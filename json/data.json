@@ -1,54 +1,54 @@
 {
-"pembahasan" : [{
-"asamBasa" : {
-"judul" : "Asam dan Basa",
-"materi" : [
-{
-"judul" : "Teori Asam",
-"penjelasan" : "",
-"subMateri" : [
-{
-"judul" : "",
-"penjelasan" : ""
-}]
-},
-{
-"judul" : "Teori Basa",
-"penjelasan" : "",
-"subMateri" : [
-{
-"judul" : "",
-"penjelasan" : ""
-},
-{
-"judul" : "Jenis Asam",
-"penjelasan" : "",
-"subMateri" : [
-{
-"judul" : "",
-"penjelasan" : ""
-}]
-},
-{
-"judul" : "Jenis Basa",
-"penjelasan" : "",
-"subMateri" : [
-{
-"judul" : "",
-"penjelasan" : ""
-}]
-},
-{
-"judul" : "Teori Asam",
-"penjelasan" : "",
-"subMateri" : [
-{
-"judul" : "",
-"penjelasan" : ""
-}]
-}]
-}
-]
-}
-}]
+	"materi": [
+		{
+			"judul": "kata pengantar",
+			"id" : "KataPengantar",
+			"pembahasan": ""
+		},
+		{
+			"judul": "kompetensi inti",
+			"id" : "KompInti",
+			"pembahasan": ""
+		},
+		{
+			"judul": "kompetensi dasar",
+			"id" :"KompDasar",
+			"pembahasan": ""
+		},
+		{
+			"judul": "materi asam basa",
+			"id" : "MateriAsamBasa",
+			"pembahasan": [
+				{
+					"judul": "menurut teori arrhenius",
+					"materi": "",
+					"subMateri": [
+						{
+							"judul": "Teori Asam",
+							"materi": ""
+						},
+						{
+							"judul": "Teori Basa",
+							"materi": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"judul": "latihan soal",
+			"id" : "Latihan",
+			"pembahasan": ""
+		},
+		{
+			"judul": "percobaan",
+			"id" : "Percobaan",
+			"pembahasan": ""
+		},
+		{
+			"judul": "daftar pustaka",
+			"id" : "DaftarPustaka",
+			"pembahasan": ""
+		}
+	]
 }
