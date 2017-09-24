@@ -3,33 +3,51 @@
 		{
 			"judul": "kata pengantar",
 			"id" : "KataPengantar",
-			"pembahasan": ""
+			"pembahasan": "Alhamdulillah, segala puji syukur penulis panjatkan kehadirat Allah SWT, atas segala karunia dan ridho-NYA, sehingga tesis dengan judul “PENGEMBANGAN BAHAN AJAR BERBASIS WEB MATERI POKOK LARUTAN ASAM BASA” ini dapat diselesaikan. Tesis ini disusun untuk memenuhi salah satu persyaratan memperoleh gelar magister Pendidikan (M.Pd) Pada Fakulta MIPA Konsetrasi Kimia di Universitas Pakuan Bogor.Oleh karena itu, pada kesempatan ini penulis menyampaikan rasa hormat dan menghaturkan terima kasih yang sebesar-besarnya, kepada : Dengan keterbatasan pengalaman, ilmu maupun pustaka yang ditinjau, penulis menyadari bahwa tesis ini masih banyak kekurangan dan pengembangan lanjut agar benar benar bermanfaat. Oleh sebab itu, penulis sangat mengharapkan kritik dan saran agar tesis ini lebih sempurna serta sebagai masukan bagi penulis untuk penelitian dan penulisan karya ilmiah di masa yang akan datang. Akhir kata, penulis berharap tesis ini memberikan manfaat bagi kita semua terutama untuk pengembangan ilmu pengetahuan yang ramah lingkungan. \n Bogor, Oktober 2017 \n \n Rd. Nia Elisa Yulianti "
 		},
 		{
-			"judul": "kompetensi inti",
-			"id" : "KompInti",
-			"pembahasan": ""
-		},
-		{
-			"judul": "kompetensi dasar",
-			"id" :"KompDasar",
-			"pembahasan": ""
+			"judul": "kompetensi",
+			"id" : "Kompetensi",
+			"pembahasan":  [
+				{
+					"judul": "kompetensi inti",
+					"materi": "",
+					"subMateri": null
+				},
+					{
+					"judul": "kompetensi dasar",
+					"materi": "",
+					"subMateri": null
+				}
+			]
 		},
 		{
 			"judul": "materi asam basa",
-			"id" : "MateriAsamBasa",
+			"id" : "MateriAbas",
 			"pembahasan": [
 				{
-					"judul": "menurut teori arrhenius",
-					"materi": "",
+					"judul": "menurut arrhenius",
+					"materi": "<div class=\"col-lg-12\"> Teori Asam Basa Arrhenius merupakan salah satu Teori Asam Basa yang paling tua dari Teori Asam Basa yang lain karena teori ini dicetuskan di tahun 1884 silam oleh seorang Ilmuwan Kimia berasal dari Swedia yang bernama Svante August Arrhenius yang lahir pada 19 Februari 1859 dan meninggal pada 2 Oktober 1927. <br>Pada tahun 1884 Silam Svante August Arrhenius mengusulkan tentang Klasifikasi Senyawa – Senyawa yang dinamakan Asam dan Basa, seperti yang telah dijelaskan oleh Arrhenius bahwa Reaksi Asam Basa ditandai oleh Asam yg telah berdisosiasi pada larutan yang berair membentuk Ion Hidronium dan Basa membentuk Ion Hidroksida.</div>",
 					"subMateri": [
 						{
 							"judul": "Teori Asam",
-							"materi": ""
+							"materi": "",
+							"subJudul":[
+							    	{
+							            "judul": "Asam Lemah",
+            							"materi": "<div class=\"col-lg-12\">Asam Lemah menurut Teori Asam Basa Svante August Arrhenius adalah Asam yg mempunyai Derajat Ionisasi lebih kecil atau asam yg mengalami Ionisasi sebagian dan Contoh dari Asam Lemah ini antara lain Asam Fluorida (HF), Asam Asetat (CH3COOH), Asam Sianida (HCN), Asam Nitrit (HNO2), Asam Sulfit (H2SO3) dan Asam Fostat (H3PO4).</div>"
+						            },
+						            {
+							            "judul": "Asam Kuat",
+            							"materi": "<div class=\"col-lg-12\">Asam Kuat dalam Teori Asam Basa Arrhenius ialah Asam yang mempunyai Derajat Ionisasi mendekati Satu Asam yang mengalami Ionisasi sempurna dan Contoh dari Asam Kuat antara lain Asam Klorida (HCI), Asam Bromida (HBr), Asam Iodida (HI), Asam Nitrat (HNO3), Asam Sulfit (H2SO3), Asam Fostat (H3PO4) dan Asam Karbonat (H2CO3).</div>"
+						            }
+						            
+							 ]
 						},
 						{
 							"judul": "Teori Basa",
-							"materi": ""
+							"materi": "Basa Menurut Teori Asam Basa Arrhenius adalah Senyawa atau Zat yang didalam Air dapat menghasilkan suatu Ion Hidroksida (OH-) dan Basa berdasarkan Ion OH- yang dilepaskan pd reaksi Ionisasi basa dibedakan menjadi Basa Monohidroksi yang mempunyai pengertian suatu Basa yang bereaksi pada Ionisasi melepaskan Satu Ion OH-",
+							"subJudul": null
 						}
 					]
 				}

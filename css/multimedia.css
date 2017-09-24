@@ -102,21 +102,6 @@
   transition: border-radius 0.3s linear 0.2s;
 }
 
-.panel-default .panel-heading a:before {
-  content: '\003e';
-  font-size: 26px;
-  position: absolute;
-  right: 15px;
-  top: 5px;
-  transform: rotate(0);
-  transition: all 0.5s;
-}
-
-.panel-open .panel-heading a:before {
-  transform: rotate(90deg);
-  transition: all 0.5s;
-}
-
 .border-right-black-2 {
   border-right: 2px solid black; 
 }
@@ -128,4 +113,9 @@
 .accordion-toggle {
   background-color: #337ab7 !important;
   color: #fff !important;
+}
+
+.selected {
+  background-color: black !important;
+  opacity: 20%;
 }
