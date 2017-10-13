@@ -1,18 +1,17 @@
 (function () {
     'use strict';
     angular.module('homeView')
-        .controller('homeViewCtrl', ['$scope', '$state', '$http', homeViewCtrl]);
+        .controller('homeViewCtrl', ['$scope', '$state', '$http', '$sce', homeViewCtrl]);
 
-    function homeViewCtrl($scope, $state, $http) {
+    function homeViewCtrl($scope, $state, $http, $sce) {
       var homeViewCtrlVM = this;
 		  homeViewCtrlVM.dataComplete = null;
       homeViewCtrlVM.penjelasanMateri = null; 
       homeViewCtrlVM.buttonMenuUtamaCLicked = buttonMenuUtamaCLicked;
-      homeViewCtrlVM.loadTemplate = loadTemplate;
-      homeViewCtrlVM.loadTemplateSubJudul = loadTemplateSubJudul;
-      homeViewCtrlVM.isOpen = false;
-      homeViewCtrlVM.isOpenSubmenu = false;
+      homeViewCtrlVM.showContent = showContent;
       homeViewCtrlVM.selectedMenuUtama = null;
+      homeViewCtrlVM.selectedSubMenu = null;
+      homeViewCtrlVM.selectedTemplate = null;
 
 		  getDataFromJson();
 
@@ -31,35 +30,12 @@
         }
       }
 
-      function loadTemplate(template, isOpen) {
-        if (!isOpen) {
-          homeViewCtrlVM.isOpenSubmenu = false;
-        }
+      function showContent(subMateri) {
 
-        if (template && isOpen && !homeViewCtrlVM.isOpenSubmenu || !isOpen && !homeViewCtrlVM.isOpenSubmenu ) {
-          var container = $('.dynamic-content');
-          container.html("");
-          console.log(container.html())
-          container.html(template);
-          console.log(container.html())
-          var newScope = angular.element(container).scope();
-          var compile = angular.element(container).injector().get('$compile');
-          compile($(container).contents())(newScope);
+        if (subMateri) {
+          homeViewCtrlVM.selectedTemplate = $sce.trustAsHtml(subMateri);
         }
-      }
-
-      function loadTemplateSubJudul(template, isOpen) {
-        homeViewCtrlVM.isOpenSubmenu = isOpen;
-         if (template && isOpen) {
-          var container = $('.dynamic-content');
-          container.html("");
-          console.log(container.html())
-          container.html(template);
-          console.log(container.html())
-          var newScope = angular.element(container).scope();
-          var compile = angular.element(container).injector().get('$compile');
-          compile($(container).contents())(newScope);
-        }
+        
       }
     }
 })();

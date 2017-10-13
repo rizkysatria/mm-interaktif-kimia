@@ -1,53 +1,39 @@
 <div class="col-lg-12 col-sm-12 p0">
-<!-- LEFT MENU -->
-        <div class="col-lg-2 border-right-black-2">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="profile-picture"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="head-title">ASAM BASA</div>
-                    
-                    <div id="btn{{list.id}}" class="menu-options btn btn-primary btn-lg btn-block" ng-repeat="list in homeViewCtrlVM.dataComplete" ng-click="homeViewCtrlVM.buttonMenuUtamaCLicked(list.id)">{{list.judul}}</div>
-                </div>
-            </div>
-	   </div>
-<!-- END LEFT MENU-->
-
-<!-- CENTER MENU -->
-        <div class="col-lg-2 pr0" ng-show="homeViewCtrlVM.penjelasanMateri != null && homeViewCtrlVM.penjelasanMateri.pembahasan != ''">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="head-title mb10">{{homeViewCtrlVM.penjelasanMateri.judul}}</div>
-                    <uib-accordion close-others="false"> 
-                        <div uib-accordion-group id="accordion" ng-repeat="pembahasan in homeViewCtrlVM.penjelasanMateri.pembahasan" class="panel-default text-transform-capitalize accordion-bg-color" heading="{{pembahasan.judul}}" ng-click="homeViewCtrlVM.loadTemplate(pembahasan.materi, homeViewCtrlVM.isOpen)"  is-open="homeViewCtrlVM.isOpen">
-                             <span ng-repeat="subMateri in pembahasan.subMateri">
-                                    <div uib-accordion-group class="panel-default text-transform-capitalize accordion-bg-color" heading="{{subMateri.judul}}" is-open="homeViewCtrlVM.isOpenSubmenu">
-                                         <span ng-repeat="subJudul in subMateri.subJudul">
-                                            <a class="col-lg-12" ng-click="homeViewCtrlVM.loadTemplateSubJudul(subJudul.materi, homeViewCtrlVM.isOpenSubmenu)">{{subJudul.judul}}</a>
-                                         </span>
-                                    </div> 
-                             </span>
-                        </div> 
-                    </uib-accordion>
-                </div>
-            </div>
-       </div>
-<!-- END CENTER MENU -->
-
-<!-- RIGHT MENU -->
-        <div class="col-lg-8 p0" ng-show="homeViewCtrlVM.penjelasanMateri != null && homeViewCtrlVM.penjelasanMateri.pembahasan != ''">
-            <div class="col-lg-12">
-                <div id="" class="col-lg-12 bg-white dynamic-content"></div>
-            </div>
-        </div>
-
-
-        <div class="col-lg-10 p0" ng-show="homeViewCtrlVM.penjelasanMateri == null || homeViewCtrlVM.penjelasanMateri.pembahasan == ''">
-            <div class="col-lg-12">
-                <div class="col-lg-12 bg-white dynamic-content"></div>
-            </div>
-        </div>
-    </div>
+   <div class="col-lg-2">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="profile-picture"></div>
+         </div>
+      </div>
+      <div class="row mt25" id="accordionID">
+         <div class="col-lg-12">
+           <uib-accordion close-others="false">
+               <div uib-accordion-group id="accordion" ng-repeat="pembahasan in homeViewCtrlVM.penjelasanMateri.pembahasan" class="panel-default text-transform-capitalize accordion-bg-color" heading="{{pembahasan.judul}}" ng-click="homeViewCtrlVM.showContent(pembahasan.materi)"  is-open="homeViewCtrlVM.isOpen">
+                  <span class="active-accordion" ng-show="homeViewCtrlVM.selectedSubMenu == pembahasan.id"></span>
+                  <span ng-repeat="subMateri in pembahasan.subMateri">
+                     <div uib-accordion-group class="panel-default text-transform-capitalize accordion-bg-color" heading="{{subMateri.judul}}" is-open="homeViewCtrlVM.isOpenSubmenu">
+                        <span ng-repeat="subJudul in subMateri.subJudul">
+                        <a class="col-lg-12" ng-click="homeViewCtrlVM.showContent(subJudul.materi)">{{subJudul.judul}}</a>
+                        </span>
+                     </div>
+                  </span>
+               </div>
+            </uib-accordion>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-10 p0">
+      <nav class="navbar navbar-default navbar-bg-color-grey">
+         <div class="containter-fluid">
+            <ul class="nav navbar-nav">
+               <li ng-repeat="list in homeViewCtrlVM.dataComplete"><a href="#/" ng-click="homeViewCtrlVM.buttonMenuUtamaCLicked(list.id)" class="text-transform-capitalize">{{list.judul}}</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div id="" class="col-lg-12 bg-white" ng-hide="!homeViewCtrlVM.selectedTemplate">
+         <div class="col-lg-12 mt25 p0" ng-hide="!homeViewCtrlVM.selectedTemplate" ng-bind-html="homeViewCtrlVM.selectedTemplate"></div>
+      </div>
+      
+   </div>
+</div>
+</div>
